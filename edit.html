@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/ace/ace.js"></script>
+	<script src="js/ace/ext-language_tools.js"></script>
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/split.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/edit.js"></script>
+	<title>Edit - User JavaScript and CSS</title>
+</head>
+<body class="edit">
+
+	<header class="site-info">
+		<div class="columns">
+			<div class="columns__column columns__column_fix">
+				<a class="button button_min" href="options.html" id="settings">
+					<span class="button__icon"><i class="fa fa-arrow-left"></i></span>
+					<span data-msg="settings"></span>
+				</a>
+			</div>
+
+			<div class="columns__column columns__column_fix">
+				<input class="input site-info__name" type="text" id="ruleName" data-msg-attr="placeholder" data-msg="name">
+			</div>
+
+			<div class="columns__column columns__column_grow">
+				<input class="input site-info__domain-input" type="text" placeholder="*.example.com" id="siteId">
+			</div>
+
+			<div class="columns__column columns__column_fix">
+				<a href="https://donorbox.org/user-javascript-and-css" class="support-link button button_min" target="_blank">
+					<span class="button__icon"><i class="fa fa-coffee" aria-hidden="true"></i></span>
+					<span data-msg="thankBtn"></span>
+				</a>
+			</div>
+
+			<div class="columns__column columns__column_fix">
+				<div class="dropdown">
+					<a class="dropdown__button button button_icon button_min" id="dd">
+						<span class="button__icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+						<span data-msg="options"></span>
+					</a>
+					<div class="dropdown__list" id="libraries">
+
+						<p class="dropdown__title" data-msg="settings"></p>
+						<div class="additional dropdown__list-c"></div>
+
+						<p class="dropdown__title" data-msg="altInjection"></p>
+						<div class="alternate dropdown__list-c"></div>
+
+						<p class="dropdown__title" data-msg="libs"></p>
+						<div class="libs dropdown__list-c"></div>
+
+						<p class="dropdown__title" data-msg="actions"></p>
+						<div class="dropdown__list-c">
+							<a class="button button_icon" id="btnClear">
+								<span class="button__icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+								<span data-msg="remove"></span>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="columns__column columns__column_fix flex flex_align-items-center">
+				<a class="button" id="btnSubmit" title="CTRL+S">
+					<span class="button__icon"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
+					<span data-msg="saveChanges"></span>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="l-split is-clearfix">
+		<div class="l-split__col" id="jsCol" data-title="JS">
+			<div class="l-split__content" id="js"></div>
+		</div>
+		<div class="l-split__col" id="cssCol" data-title="CSS">
+			<div class="l-split__content" id="css"></div>
+		</div>
+	</main>
+
+	<div class="loader">
+		<div class="loader__wrap">
+			<span>{</span><span>}</span>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "js/app.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/app.js", "js/content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "img/logo_128.png",
+      "16": "img/logo_16.png",
+      "48": "img/logo_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgRLkoYUUDW9p9eBSu0/8wr6tr56i+xB3+2rAIY65FO26dBITx1bhMpk6nB0u6/TmQUk3ai3hTn3Srzmaf9FHfQiCt8R0CDENZtHICcXt1RzTEdEwFAikbHJWVRGZ4p7GqizeqO1iGQ1oj/jpxCHTee2vuYGeH1llx+CFwEWSSfN0RY5B20EXb5q3wnaYITBW6KthfQ/HZyqVTa/VfBfvGn8ZE/HEHkOpTfMXZRKL1adQBQGweJVjLU7CdDQVn09DF6QSRlN897u6ovhY+dPB18VnzwP5DjeIVGNpxr8/y+FYYZYvd2hLTi8c5OI4iIgJ2cjvsVHsUMWipA7SE0vgswIDAQAB",
+   "manifest_version": 2,
+   "name": "YouBeInJSected",
+   "options_page": "options.html",
+   "permissions": [ "storage", "http://*/", "https://*/", "tabs" ],
+   "short_name": "User JS and CSS",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.8",
+   "web_accessible_resources": [ "js/libs/jquery.min.js" ]
+}

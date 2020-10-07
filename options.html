@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/Sortable.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/large-sync.js"></script>
+	<script src="js/options.js"></script>	
+	<title>User JavaScript and CSS</title>
+</head>
+<body id="options-page">
+
+	<header class="container">
+		<div class="header-title side-padding">
+			<h1>User JavaScript and CSS</h1>
+		</div>
+	</header>
+
+	<main class="container box">
+		<div class="blink-indicator save" data-msg="saved"></div>
+		<nav class="tabs tabs_menu">
+			<a class="tabs__tab tabs__tab_active" data-tab="websites" data-msg="websites"></a>
+			<a class="tabs__tab" data-tab="libraries" data-msg="libs"></a>
+			<a class="tabs__tab" data-tab="doc" data-msg="docBtn"></a>
+			<a class="tabs__tab" data-tab="settings" data-msg="settings"></a>
+		</nav>
+		<div class="tabs">
+
+			<div class="tabs__content tabs__content_active" data-tab="websites">
+				<div class="text-center box__content">
+					<a class="button button_primary" href="edit.html">
+						<span class="button__icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+						<span data-msg="addNewSite"></span>
+					</a>
+				</div>
+				<div id="siteList"></div>
+			</div>
+
+			<div class="tabs__content" data-tab="libraries">
+				<div class="box__content">
+					<p data-msg="libsDescription"></p>
+				</div>
+				<div id="libsList"></div>
+				<div class="box__content">
+					<form id="libsFormAdd" method="post">
+						<div class="columns">
+							<div class="columns__column columns__column_x2">
+								<input class="input" id="libname" type="text" data-msg-attr="placeholder" data-msg="name">
+							</div>
+							<div class="columns__column columns__column_x2">
+								<input class="input" id="libsrc" type="text" placeholder="http://example.com/lib.js">
+							</div>
+							<div class="columns__column">
+								<a id="libsubmit" class="button button_primary">
+									<span class="button__icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+									<span data-msg="addNew"></span>
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="tabs__content typo" data-tab="doc">
+
+				<div class="doc doc_ru">
+					<div class="box__content box__content_hr">
+						<h4>URL</h4>
+						<p>Примеры валидных адресов:</p>
+						<ul>
+							<li><code>example.com</code></li>
+							<li><code>example.com, seconddomain.com</code></li>
+							<li><code>example.com, !example.com/excluded</code></li>
+							<li><code>example.com/*/images/</code></li>
+							<li><code>http://dev.example.com/</code> — рекомендуемый</li>
+						</ul>
+					</div>
+					<div class="box__content box__content_hr">
+						<h4>JavaScript</h4>
+						<p>Все скрипты автоматически запускаются с событием <a href="http://docs.w3cub.com/dom_events/domcontentloaded/" target="_blank">DOMContentLoaded</a>.</p>
+						<p>Опция <strong>программное подключение</strong> запускает скрипты через встроенную в браузер функцию <a target="_blank" href="https://developer.chrome.com/extensions/tabs#method-executeScript">executeScript</a>. Такие скрипты имеют полный доступ к DOM дереву, но контекст страницы им недоступен. Такой метод запуска позволяет избежать проблем, например, с CORS.</p>
+					</div>
+					<div class="box__content box__content_hr">
+						<h4>CSS стили</h4>
+						<p>CSS включаются практически мгновенно, еще перед полным построением DOM дерева.</p>
+						<p>Опция <strong>максимальный приоритет</strong> автоматически добавляет <code>!important</code> ко всем свойствам перед применением на страницу.</p>
+						<p>Опция <strong>программное подключение</strong> использует стандартный для браузера способ внедрения стилей <a target="_blank" href="https://developer.chrome.com/extensions/tabs#method-insertCSS">insertCSS</a>. Стили запущеные таким образом имеют высший приоритет перед стилями страницы (при использовании <code>!important</code> &ndash; максимальный), однако "живые" правки через инструменты разработчика исключены.</p>
+					</div>
+				</div>
+
+				<div class="doc doc_en">
+					<div class="box__content box__content_hr">
+						<h4>URL</h4>
+						<p>Examples of valid masks:</p>
+						<ul>
+							<li><code>example.com</code></li>
+							<li><code>example.com, seconddomain.com</code></li>
+							<li><code>example.com, !example.com/excluded</code></li>
+							<li><code>example.com/*/images/</code></li>
+							<li><code>http://dev.example.com/</code> — recommended</li>
+						</ul>
+					</div>
+					<div class="box__content box__content_hr">
+						<h4>JavaScript</h4>
+						<p>All scripts automatically start with the event <a href="http://docs.w3cub.com/dom_events/domcontentloaded/" target="_blank">DOMContentLoaded</a>.</p>
+						<p>The <strong>programmatic injection</strong> option runs scripts through the built-in function <a target="_blank" href="https://developer.chrome.com/extensions/tabs#method-executeScript">executeScript</a>. These scripts have full access to the DOM tree, but not to the context of the page. This method avoids CORS issues.</p>
+					</div>
+					<div class="box__content box__content_hr">
+						<h4>CSS styles</h4>
+						<p>CSS is included almost instantly, even before the DOM ready.</p>
+						<p>The <strong>highest priority</strong> option automatically adds <code>!important</code> to all CSS properties before applying to the page.</p>
+						<p>The <strong>programmatic injection</strong> option use the standard way for the browser to inject styles <a target="_blank" href="https://developer.chrome.com/extensions/tabs#method-insertCSS">insertCSS</a>. This way injecting styles have the high priority over page styles (with <code>!important</code> &ndash; highest), however, "live" edits through developer tools are excluded.</p>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="tabs__content" data-tab="settings">
+				<div id="settings" class="box__content box__content_hr">
+					<h4 data-msg="editor">Editor</h4>
+				</div>
+				<div id="settingsExt" class="box__content box__content_hr">
+					<h4 data-msg="extension">Extension</h4>
+				</div>
+				<div class="box__content box__content_hr">
+					<h4 data-msg="backup"></h4>
+					<p data-msg="jsonInstructions"></p>
+					<a class="button button_primary" id="jsonDownload">
+						<span class="button__icon"><i class="fa fa-download" aria-hidden="true"></i></span>
+						<span data-msg="jsonDownload"></span>
+					</a>
+					<label class="button button_file" >
+						<input type="file" name="loadJson" accept="application/json" id="loadJson">
+						<span class="button__icon"><i class="fa fa-upload" aria-hidden="true"></i></span>
+						<span data-msg="jsonUpload"></span>
+					</label>
+					<a class="button button_secondary" id="allToDefaults">
+						<span class="button__icon"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+						<span data-msg="resetBtn"></span>
+					</a>
+				</div>
+				<div class="box__content box__content_hr">
+					<h4 data-msg="cloudTitle"></h4>
+					<p data-msg="cloudDesc"></p>
+					<div class="b-options-stats">
+						<div class="b-options-stats__item level level_settings">
+							<div class="b-options-stats__name level__left" data-msg="cloudLimit"></div>
+							<div class="b-options-stats__value level__right">102</div>
+						</div>
+						<div class="b-options-stats__item level level_settings">
+							<div class="b-options-stats__name level__left" data-msg="cloudLocalUsed"></div>
+							<div class="b-options-stats__value level__right" id="localBytesInUse"></div>
+						</div>
+						<div class="b-options-stats__item level level_settings">
+							<div class="b-options-stats__name level__left" data-msg="cloudUsed"></div>
+							<div class="b-options-stats__value level__right" id="cloudBytesInUse"></div>
+						</div>
+					</div>
+					<a class="button" id="chromeSyncGet">
+						<span class="button__icon"><i class="fa fa-cloud-download" aria-hidden="true"></i></span>
+						<span data-msg="cloudDownload"></span>
+					</a>
+					<a class="button" id="chromeSyncSet">
+						<span class="button__icon"><i class="fa fa-cloud-upload" aria-hidden="true"></i></span>
+						<span data-msg="cloudUpload"></span>
+					</a>
+				</div>
+				<div id="about" class="box__content box__content_hr">
+					<h4 data-msg="about">About</h4>
+				</div>
+				<div class="box__content text-center">
+
+					<a href="https://donorbox.org/user-javascript-and-css" class="support-link button button_min" target="_blank">
+						<span class="button__icon"><i class="fa fa-coffee" aria-hidden="true"></i></span>
+						<span data-msg="thankBtn"></span>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+</body>
+</html>

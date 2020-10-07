@@ -1,0 +1,215 @@
+{
+   "about": {
+      "message": "About"
+   },
+   "aboutP1": {
+      "message": "The extension develops as my hobby, i'll be glad of any support."
+   },
+   "aboutP2": {
+      "message": "This non-profit project, the author does not receive a financial benefit from it. It is constantly being improved, making your life easier and give more opportunities for favorite activities."
+   },
+   "aboutP3": {
+      "message": "Many thanks to all who support the extension."
+   },
+   "aboutThx": {
+      "message": "About"
+   },
+   "actions": {
+      "message": "Actions"
+   },
+   "addNew": {
+      "message": "Add new"
+   },
+   "addNewSite": {
+      "message": "Add new site"
+   },
+   "altCSS": {
+      "message": "CSS"
+   },
+   "altInjection": {
+      "message": "Programmatic injection"
+   },
+   "altJS": {
+      "message": "JavaScript"
+   },
+   "autoComp": {
+      "message": "Code autocomplete"
+   },
+   "autoImportant": {
+      "message": "Highest CSS priority"
+   },
+   "backup": {
+      "message": "Backup"
+   },
+   "badgeCounter": {
+      "message": "Icon badge counter"
+   },
+   "cloudDesc": {
+      "message": "The cloud synchronization function is in test mode. Before using, save a copy of the data to JSON."
+   },
+   "cloudDownload": {
+      "message": "Download from the cloud"
+   },
+   "cloudLimit": {
+      "message": "Cloud quota, KB."
+   },
+   "cloudLocalUsed": {
+      "message": "Current local storage used, KB."
+   },
+   "cloudReplaceSure": {
+      "message": "Current data will be completely replaced with data from the cloud. Are you sure?"
+   },
+   "cloudStorageEmpty": {
+      "message": "Sync is not possible! There is no data in the cloud!"
+   },
+   "cloudTitle": {
+      "message": "Cloud storage"
+   },
+   "cloudUpload": {
+      "message": "Upload to the cloud"
+   },
+   "cloudUploadfailed": {
+      "message": "Sync is not possible! The weight of the store exceeds the permissible limit in the cloud."
+   },
+   "cloudUsed": {
+      "message": "Current cloud storage used, KB."
+   },
+   "contact": {
+      "message": "Contact"
+   },
+   "dataEmpty": {
+      "message": "JS and CSS fields are empty"
+   },
+   "defaults": {
+      "message": "Defaults"
+   },
+   "description": {
+      "message": "User JavaScript and CSS on any website"
+   },
+   "disabled": {
+      "message": "Disable rule"
+   },
+   "docBtn": {
+      "message": "Documentation"
+   },
+   "editor": {
+      "message": "Editor"
+   },
+   "editorFont": {
+      "message": "Font size"
+   },
+   "editorSettings": {
+      "message": "Editor settings"
+   },
+   "editorTab": {
+      "message": "Tab size"
+   },
+   "editorTheme": {
+      "message": "Theme"
+   },
+   "extension": {
+      "message": "Extension"
+   },
+   "hideSupport": {
+      "message": "Hide support button in editor"
+   },
+   "jsonDownload": {
+      "message": "Download JSON"
+   },
+   "jsonInstructions": {
+      "message": "You can download current storage as JSON and restore it later. Warning! Before restore, all current data will be removed!"
+   },
+   "jsonUpload": {
+      "message": "Upload and apply"
+   },
+   "libs": {
+      "message": "Libraries"
+   },
+   "libsDescription": {
+      "message": "You can add custom libraries from internet for own JavaScript rules. Position in table defines priority to execute. First libraries starts first."
+   },
+   "name": {
+      "message": "Name"
+   },
+   "noSites": {
+      "message": "No sites right now. To add first site press \"Add new\" button there or in extension popup on any website."
+   },
+   "notSaved": {
+      "message": "You have unsaved changes which will not be saved"
+   },
+   "on": {
+      "message": "Enabled"
+   },
+   "onLoadJson": {
+      "message": "All current data will be removed! Are you sure?"
+   },
+   "options": {
+      "message": "Options"
+   },
+   "popupTitle": {
+      "message": "Rules for this page"
+   },
+   "remove": {
+      "message": "Remove"
+   },
+   "removeDomain": {
+      "message": "Remove domain from list?"
+   },
+   "reset": {
+      "message": "Remove all data to defaults?"
+   },
+   "resetBtn": {
+      "message": "Restore to defaults"
+   },
+   "resetMsg": {
+      "message": "Remove all current data and set basic settings."
+   },
+   "saveChanges": {
+      "message": "Save"
+   },
+   "saveSuccessful": {
+      "message": "Successfully saved!"
+   },
+   "saved": {
+      "message": "Saved"
+   },
+   "settings": {
+      "message": "Settings"
+   },
+   "stopPage": {
+      "message": "Looks like this page cannot be modified :("
+   },
+   "storage": {
+      "message": "Storage"
+   },
+   "thankBtn": {
+      "message": "Support"
+   },
+   "urlEmpty": {
+      "message": "URL field is empty"
+   },
+   "urlExist": {
+      "message": "Same URL already exist"
+   },
+   "urlTip": {
+      "message": "You can use the asterix (*) to create masks and enter multiple values separated by commas. For example:"
+   },
+   "useSoftTabs": {
+      "message": "Soft tabs"
+   },
+   "useWorker": {
+      "message": "Code validation"
+   },
+   "version": {
+      "message": "Version"
+   },
+   "vimMode": {
+      "message": "Vim mode"
+   },
+   "websites": {
+      "message": "Sites"
+   },
+   "wrap": {
+      "message": "Word wrap"
+   }
+}
