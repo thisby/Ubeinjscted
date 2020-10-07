@@ -1,9 +1,6 @@
 "use strict";
 $(function () {
-
-    console.log("in ready!");
-
-
+    alwaysInReady();
     function c() {
         var e = function () {
             var t = [];
