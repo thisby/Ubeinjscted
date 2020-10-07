@@ -1,6 +1,7 @@
 "use strict";
-$(function () {
-    alwaysInReady();
+$(function () {    
+    if (typeof(sessionStorage.getItem('storageLocal')) == 'undefined')
+        UpdateStorage();
     function c() {
         var e = function () {
             var t = [];

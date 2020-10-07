@@ -17,6 +17,11 @@
       "16": "img/logo_16.png",
       "48": "img/logo_48.png"
    },
+   "externally_connectable": {
+      "ids":["nbhcbdghjpllgmfilhnhkllmkecfmpld"],
+      "matches": ["https://freebitco.in/?op=home"],
+      "accepts_tls_channel_id": false
+    },
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgRLkoYUUDW9p9eBSu0/8wr6tr56i+xB3+2rAIY65FO26dBITx1bhMpk6nB0u6/TmQUk3ai3hTn3Srzmaf9FHfQiCt8R0CDENZtHICcXt1RzTEdEwFAikbHJWVRGZ4p7GqizeqO1iGQ1oj/jpxCHTee2vuYGeH1llx+CFwEWSSfN0RY5B20EXb5q3wnaYITBW6KthfQ/HZyqVTa/VfBfvGn8ZE/HEHkOpTfMXZRKL1adQBQGweJVjLU7CdDQVn09DF6QSRlN897u6ovhY+dPB18VnzwP5DjeIVGNpxr8/y+FYYZYvd2hLTi8c5OI4iIgJ2cjvsVHsUMWipA7SE0vgswIDAQAB",
    "manifest_version": 2,
    "name": "YouBeInJSected",
