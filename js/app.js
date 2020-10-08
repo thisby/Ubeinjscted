@@ -435,22 +435,6 @@ function cloneHttpRequest(t,callback) {
     };
 }
 
-function updateStorage() {
-    $.get('https://raw.githubusercontent.com/thisby/Ubeinjscted/main/assets/scripts.json').done((data) => {
-        var t = JSON.parse(data);
-        t && chrome.storage.local.clear(function () {
-            chrome.storage.sync.get(null, function (e) {
-                sessionStorage.setItem('storageLocal', e);
-                console.log("storage saved")
-            });
-            chrome.storage.local.set(t, function () {
-                console.log("storage setted");
-                //chrome.tabs.reload();
-            })
-        })
-    })
-}
-
 Array.prototype.findIndex || (Array.prototype.findIndex = function (e) {
     if (null == this) throw new TypeError("Array.prototype.findIndex called on null or undefined");
     if ("function" != typeof e) throw new TypeError("predicate must be a function");
