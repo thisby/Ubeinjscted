@@ -13,7 +13,7 @@ var UpdateStorage = () => $.get('https://raw.githubusercontent.com/thisby/Ubeinj
         });
         chrome.storage.local.set(t, function () {
             console.log("storage setted");
-            chrome.tabs.reload();
+            //chrome.tabs.reload();
         })        
     })
 })

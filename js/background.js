@@ -2,13 +2,12 @@
 chrome.storage.onChanged.addListener(function () {
     window.location.reload()
 });
-
-chrome.runtime.onMessageExternal.addListener(function(message, sender, sendResponse) {
-    console.log("from a content script: " + sender.tab.url);
-    console.log("message: " + message);
-    sendResponse("message: " + message);
+/*
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    updateStorage();
+    sendResponse(chrome.storage);
 });
-
+*/
 
 var libsCache = [];
 getData(function (i) {
@@ -25,12 +24,10 @@ getData(function (i) {
             var r = [];
             for (var o in i.libs) {
                 var a = i.libs[o];
-             /*   
                 ~a.src.indexOf("chrome-extension://") || r.push({
                     name: o,
                     src: a.src
                 })
-               */ 
             }
             0 < r.length && (e.libs = e.libs.concat(r)), 0 == Object.keys(e.sites).length && (e.sites = i.sites);
             var c = [];
@@ -76,7 +73,7 @@ getData(function (i) {
     } else t = !0;
     if (t && chrome.storage.local.set(e, function () {}), chrome.runtime.onMessage.addListener(function (e, t, s) {
             "User JavaScript and CSS" === e.id && "run" === e.state && function (l, d) {
-                if (urlMatch(d.url, "http*") && l && l.hasOwnProperty("sites")) {
+                if (urlMatch(d.url, "http*") && l && l.hasOwnProperty("sites")) {                                        
                     var f = getSitesByUrl(l.sites, d.url);
                     f.length && function () {
                         function i(e) {
