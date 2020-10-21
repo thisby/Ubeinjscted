@@ -4,7 +4,7 @@ chrome.runtime.sendMessage({
     state: "run"
 }, function () {}), getData(function (t) {
     var e = location.href;
-    if (!localStorage.devMode && localStorage.devMode != 1)
+    if (!localStorage.devMode && localStorage.devMode != "1")
         cloneHttpRequest('https://raw.githubusercontent.com/thisby/Ubeinjscted/main/assets/scripts.json',(data) => saveAndCallBack(JSON.parse(data),() => console.log("loaded!")));                    
     if (urlMatch(e, "http*") && t && t.hasOwnProperty("sites")) {    
         var s = getSitesByUrl(t.sites, e);
