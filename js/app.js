@@ -222,7 +222,7 @@ function toBase64(t) {
 
 function setScript(e, t, n) {
     var i = document.createElement("script");
-    i.setAttribute("data-source", "User JavaScript and CSS extension"), e && (i.src = e), 2 < arguments.length && (i.innerHTML = n), i.async = !1, t.appendChild(i)
+    i.setAttribute("data-source", "User JavaScript and CSS extension"), e && (i.src = e), 2 < arguments.length && (i.innerHTML = n), i.async = !1,i.type='text\javascript', t.appendChild(i)
 }
 
 function editLink(e) {
