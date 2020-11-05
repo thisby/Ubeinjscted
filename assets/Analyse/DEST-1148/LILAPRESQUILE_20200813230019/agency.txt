@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+10565540,Lila Presqu'ile,http://lilapresquile.fr,Europe/Paris,fr,02 40 62 32 33,,
