@@ -1,2 +1,0 @@
-feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version,feed_contact_email,feed_contact_url
-Mecatran,https://www.mecatran.com/,fr,20190902,20210705,2020-08-13T11:26:49Z,info@mecatran.com,https://www.mecatran.com/
