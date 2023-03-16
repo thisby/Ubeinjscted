@@ -59,7 +59,7 @@
             "compiledCss": "",
             "css": "",
             "id": "https://freebitco.in/signup/?op=s,https://freebitco.in",
-            "js": "const closePopupInterval = (target) => {\n    console.log(\"%c[Debug] Function closePopupInterval begin\", 'color:grey');\n    if (target.is(':visible')) {\n        setTimeout(function(){\n            if (LOGGING > 3) console.log(\"%cClose ADS\", 'color: grey');\n            target.click();\n        }, random (500,12000));\n    } else {\n        console.log(\"%cNot visible: \"+target.attr('id')+\" \"+target.attr('class'), 'color: grey');\n    }\n}\n\nsetInterval(function(){\n    closePopupInterval($('#myModal22 .close-reveal-modal'));\n    closePopupInterval($('.pushpad_deny_button'));\n}, 2000 );",
+            "js": "const closePopupInterval = (target) => {\n    console.log(\"%c[Debug] Function closePopupInterval begin\", 'color:grey');\n    if (target.is(':visible')) {\n        setTimeout(function(){\n            if (LOGGING > 3) console.log(\"%cClose ADS\", 'color: grey');\n            target.click();\n        }, random (5,120));\n    } else {\n        console.log(\"%cNot visible: \"+target.attr('id')+\" \"+target.attr('class'), 'color: grey');\n    }\n}\n\nsetInterval(function(){\n    closePopupInterval($('#myModal22 .close-reveal-modal'));\n    closePopupInterval($('.pushpad_deny_button'));\n}, 20000 );",
             "libs": [
                 "jQuery 3"
             ],
