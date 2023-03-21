@@ -1,1 +1,0 @@
-git add . && git commit -m 'Scripts Improvment' && git push && clear
