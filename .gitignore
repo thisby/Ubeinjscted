@@ -1,3 +1,6 @@
 /YouBeInJSected
 assets/scripts-*.json
 push.sh
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
